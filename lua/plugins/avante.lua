@@ -65,7 +65,7 @@ return {
       proxy = nil,
     },
     rag_service = {
-      enabled = true, -- включи когда понадобится
+      enabled = false,
       host_mount = os.getenv("HOME"),
       runner = "docker",
       llm = {

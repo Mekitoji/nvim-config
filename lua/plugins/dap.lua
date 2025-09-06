@@ -9,9 +9,6 @@ return {
     config = function()
       local dap, dapui = require("dap"), require("dapui")
 
-      -------------------------------------------------------------------
-      -- 1. Адаптер pwa-node через Mason-установленный js-debug
-      -------------------------------------------------------------------
       local mason_path = vim.fn.stdpath("data") .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js"
 
       dap.adapters["pwa-node"] = {
@@ -24,9 +21,6 @@ return {
         },
       }
 
-      -------------------------------------------------------------------
-      -- 2. Один набор конфигов → назначаем нескольким filetype’ам
-      -------------------------------------------------------------------
       local node_configs = {
         {
           type = "pwa-node",

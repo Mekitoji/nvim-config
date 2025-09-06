@@ -4,3 +4,7 @@
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.o.timeoutlen = 300
+
+-- close tab
+vim.keymap.del("n", "<leader><tab>d")
+vim.keymap.set("n", "gz", ":tabclose<CR>")
