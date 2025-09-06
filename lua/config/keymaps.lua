@@ -6,5 +6,9 @@ vim.keymap.set("t", "jk", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.o.timeoutlen = 300
 
 -- close tab
-vim.keymap.del("n", "<leader><tab>d")
 vim.keymap.set("n", "gz", ":tabclose<CR>")
+
+-- go to definition in new tab
+vim.keymap.set("n", "gb", function()
+  require("telescope.builtin").lsp_definitions({ jump_type = "tab" })
+end, { desc = "Go to Definition (tab)" })
